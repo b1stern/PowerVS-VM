@@ -1,29 +1,4 @@
 
-Pull requests
-Issues
-Marketplace
-Explore
-@b1stern
-IBM-CAMHub-Open /
-starterlibrary
-Public
-
-Code
-Pull requests 3
-Actions
-Security
-
-    Insights
-
-starterlibrary/BlueMix/terraform/hcl/scenario1/camvariables.json
-@octravis
-octravis Automated CAMHub::publish on 2020-11-13 19:05:34 UTC
-Latest commit 114635a on Nov 13, 2020
-History
-2 contributors
-@octravis
-@invalid-email-address
-205 lines (205 sloc) 5.29 KB
 {
   "terraform_version": "~> 0.11.0",
   "input_datatypes": [
