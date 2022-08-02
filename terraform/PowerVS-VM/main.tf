@@ -13,7 +13,7 @@ variable "public_ssh_key" {
 
 variable "datacenter" {
   description = "Softlayer datacenter where infrastructure resources will be deployed"
-  default     = "
+  default     = "dal12"
 }
 
 variable "hostname" {
