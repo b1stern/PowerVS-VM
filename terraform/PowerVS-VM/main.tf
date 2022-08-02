@@ -23,7 +23,7 @@ variable "hostname" {
 variable "os_reference_code" {
   type = "string"
   description = "Operating system image id / template that should be used when creating the virtual image"
-  default = "DEBIAN_9_64"
+  default = "7300-00-01"
 }
   
 resource "ibm_pi_instance" "test-instance" {
