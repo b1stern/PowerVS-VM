@@ -17,7 +17,7 @@ variable "datacenter" {
 
 variable "hostname" {
   description = "Hostname of the virtual instance (small flavor) to be deployed"
-  default     = "debian-small"
+  default     = "benvm2"
 }
 
 variable "os_reference_code" {
@@ -29,7 +29,7 @@ variable "os_reference_code" {
 resource "ibm_pi_instance" "test-instance" {
     pi_memory             = "4"
     pi_processors         = "2"
-    pi_instance_name      = "test-vm"
+    pi_instance_name      = "benvm2"
     pi_proc_type          = "shared"
     pi_image_id           = "8810d643-5d62-46cb-bfc4-8c9593e4f7c0"
     pi_key_pair_name      = ibm_pi_key.key.key_id
