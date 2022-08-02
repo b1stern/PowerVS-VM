@@ -20,7 +20,7 @@
         "name": "os_reference_code",
         "type": "string",
         "description": "Operating system image id / template that should be used when creating the virtual image",
-        "default": "DEBIAN_9_64",
+        "default": "AIX 7.2",
         "hidden": false,
         "label": "Operating System ID",
         "secured": false,
@@ -178,7 +178,7 @@
         "group": "virtualmachine"
     },
     {
-        "default": "debian-small",
+        "default": "benvm1",
         "description": "Hostname of the virtual instance (small flavor) to be deployed",
         "hidden": false,
         "immutable": false,
