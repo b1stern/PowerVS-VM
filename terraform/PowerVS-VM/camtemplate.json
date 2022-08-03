@@ -33,7 +33,7 @@
        },
        {
          "title": "Operating systems supported",
-         "description": "IBM Cloud: Debian 9"
+         "description": "IBM Cloud: AIX, Linux on Power, IBM i"
        },
        {
          "title": "Topology",
