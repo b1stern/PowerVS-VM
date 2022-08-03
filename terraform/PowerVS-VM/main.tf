@@ -33,7 +33,7 @@ resource "ibm_pi_instance" "test-instance" {
     pi_instance_name      = "benvm2"
     pi_proc_type          = "shared"
     pi_image_id           = "8810d643-5d62-46cb-bfc4-8c9593e4f7c0"
-    pi_key_pair_name      = ibm_pi_key.key.key_id
+    pi_key_pair_name      = "Ben1"
     pi_sys_type           = "s922"
     pi_cloud_instance_id  = "9af78e357-4df2-42b8-81af-9960a10b6968"
     pi_pin_policy         = "none"
