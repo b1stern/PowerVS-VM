@@ -1,16 +1,16 @@
 variable "ibmcloud_api_key" {
   description = "Denotes the IBM Cloud API key to use"
-  default     = "<YOUR_API_KEY>"
+  default     = "hjTEiWtDyqdBa4sRrWKEnqX0SQIcdeNuS1YmG2QQ91m9"
 }
 
 variable "ibmcloud_region" {
   description = "Denotes which IBM Cloud region to connect to"
-  default     = "mon"
+  default     = "dal"
 }
 
 variable "ibmcloud_zone" {
   description = "Denotes the zone within the region to connect to (only needed for multi-zone regions--e.g., eu-de-1)"
-  default     = "mon01"
+  default     = "dal12"
 }
 
 variable "vm_name" {
@@ -20,12 +20,12 @@ variable "vm_name" {
 
 variable "power_instance_id" {
   description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
-  default     = "<YOUR_SERVICE_GUID>"
+  default     = "9af78e357-4df2-42b8-81af-9960a10b6968"
 }
 
 variable "memory" {
   description = "Amount of memory (GB) to be allocated to the VM"
-  default     = "4"
+  default     = "2"
 }
 
 variable "processors" {
@@ -45,7 +45,7 @@ variable "storage_type" {
 
 variable "ssh_key_name" {
   description = "SSH key name in IBM Cloud to be used for SSH logins"
-  default     = "jwcroppe-mac"
+  default     = "Ben1"
 }
 
 variable "shareable" {
