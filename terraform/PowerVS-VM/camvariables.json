@@ -20,7 +20,7 @@
         "name": "os_reference_code",
         "type": "string",
         "description": "Operating system image id / template that should be used when creating the virtual image",
-        "default": "AIX 7.2",
+        "default": "8810d643-5d62-46cb-bfc4-8c9593e4f7c0",
         "hidden": false,
         "label": "Operating System ID",
         "secured": false,
@@ -30,6 +30,7 @@
     },      
     {
         "description": "Public SSH key used to connect to the virtual guest",
+	"default": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAEppnUJ192G9CqmlQ5oh0vhjU/NPZSaWv1L27+D6gO+Wq//14Zixwf1FVsuToAnr3D/MhXWbD0Uq594rEX8v8sLfqYoo69K2Rvv51T4auexzlvBrA/IOd2gwc2m+GpHGxFTbmCF2J1uY4sRG1X+G8bK+8lfg2V6UuszGQmEuX8EacQCFC3eYPm4Adnej+FXJK71zBfVGi5W7QDiXZIqA/ol43SuHyIqc07Genvk3qZFbS+FVmyUmpSx8pg1EuD2KYgIq17TIQepA5dMUAaZk9grcuyilN87yJHSfnxh+aSmXDUHySEJGoSt3zEh3RxM8NxjY4LvwMLXScKqcMPG5BBPpnc/kF+BfcvjaNgwSd60O5R4pqQ19dBfUBPwDxxjdWsh8uC3hN6VlYCzMOXkHfNi2F0iJTU04eXwv88DP5+msTg6yiF5w2ausTKRWFZZ9X6loOcnsNfji/KnfHX33HaEED5iETFYFgxUmgWzZs3sKaC1Jh0tnRYR365arUBAas3UcWYw+eMCSm6dzVyLeLwAOY47GwsI5vNpErdNpWXvO7vEHy/qV2+7OY2ufODfQ+JjCrvULnHMYi6L2DMxGyru0jF4N/IcDwkJ9Api7/fOznv3h+JIzIqz+n1jvoXyP8LbJK8D45OJUhHEYip/CMy/0TV88x5thLvLXlu17VNw== bstern@Bens-MacBook-Pro.local",
         "hidden": false,
         "immutable": false,
         "label": "Public SSH Key",
