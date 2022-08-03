@@ -1,44 +1,89 @@
-provider "ibm" {
-  region    =   "lon"
-  zone      =   "lon04"
+variable "ibmcloud_api_key" {
+  description = "Denotes the IBM Cloud API key to use"
+  default     = "<YOUR_API_KEY>"
 }
 
-module "camtags" {
-  source = "../Modules/camtags"
+variable "ibmcloud_region" {
+  description = "Denotes which IBM Cloud region to connect to"
+  default     = "mon"
 }
 
-variable "public_ssh_key" {
-  description = "Public SSH key used to connect to the virtual guest"
+variable "ibmcloud_zone" {
+  description = "Denotes the zone within the region to connect to (only needed for multi-zone regions--e.g., eu-de-1)"
+  default     = "mon01"
 }
 
-variable "datacenter" {
-  description = "Softlayer datacenter where infrastructure resources will be deployed"
-  default     = "dal12"
+variable "vm_name" {
+  description = "Name of the VM"
+  default     = "demo-VM"
 }
 
-variable "hostname" {
-  description = "Hostname of the virtual instance (small flavor) to be deployed"
-  default     = "benvm2"
+variable "power_instance_id" {
+  description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
+  default     = "<YOUR_SERVICE_GUID>"
 }
 
-variable "os_reference_code" {
-  type = "string"
-  description = "Operating system image id / template that should be used when creating the virtual image"
-  default = "7300-00-01"
+variable "memory" {
+  description = "Amount of memory (GB) to be allocated to the VM"
+  default     = "4"
 }
-  
-resource "ibm_pi_instance" "test-instance" {
-    pi_memory             = "4"
-    pi_processors         = "2"
-    pi_instance_name      = "benvm2"
-    pi_proc_type          = "shared"
-    pi_image_id           = "8810d643-5d62-46cb-bfc4-8c9593e4f7c0"
-    pi_key_pair_name      = "Ben1"
-    pi_sys_type           = "s922"
-    pi_cloud_instance_id  = "9af78e357-4df2-42b8-81af-9960a10b6968"
-    pi_pin_policy         = "none"
-    pi_health_status      = "WARNING"
-    pi_network {
-      network_id = data.ibm_pi_public_network.dsnetwork.id
-    }
+
+variable "processors" {
+  description = "Number of virtual processors to allocate to the VM"
+  default     = "1"
+}
+
+variable "proc_type" {
+  description = "Processor type for the LPAR - shared/dedicated"
+  default     = "shared"
+}
+
+variable "storage_type" {
+  description = "The type of storage to attach to the LPAR (tier1/tier3)"
+  default     = "tier3"
+}
+
+variable "ssh_key_name" {
+  description = "SSH key name in IBM Cloud to be used for SSH logins"
+  default     = "jwcroppe-mac"
+}
+
+variable "shareable" {
+  description = "Should the data volume be shared or not - true/false"
+  default     = "true"
+}
+
+variable "networks" {
+  description = "List of networks that should be attached to the VM"
+  default     = ["rdr-instana-net"]
+}
+
+variable "system_type" {
+  description = "Type of system on which the VM should be created - s922/e880"
+  default     = "s922"
+}
+
+variable "migratable" {
+  description = "Can the VM be migrated - true/false"
+  default     = "true"
+}
+
+variable "image_name" {
+  description = "Name of the image from which the VM should be deployed"
+  default     = "7200-05-01"
+}
+
+variable "replication_policy" {
+  description = "Replication policy of the VM"
+  default     = "none"
+}
+
+variable "replication_scheme" {
+  description = "Replication scheme for the VM"
+  default     = "suffix"
+}
+
+variable "replicants" {
+  description = "Number of VM instances to deploy"
+  default     = "1"
 }
