@@ -1,20 +1,30 @@
-provider "ibm" {
-  region    =   "lon"
-  zone      =   "lon04"
+## Template to be used by the IBM Provider for Power Systems
+
+data "ibm_pi_network" "power_networks" {
+  count                = length(var.networks)
+  pi_network_name      = var.networks[count.index]
+  pi_cloud_instance_id = var.power_instance_id
 }
 
-resource "ibm_pi_instance" "test-instance" {
-    pi_memory             = "4"
-    pi_processors         = "2"
-    pi_instance_name      = "test-vm"
-    pi_proc_type          = "shared"
-    pi_image_id           = "8810d643-5d62-46cb-bfc4-8c9593e4f7c0"
-    pi_key_pair_name      = "Ben1"
-    pi_sys_type           = "s922"
-    pi_cloud_instance_id  = "51e1879c-bcbe-4ee1-a008-49cdba0eaf60"
-    pi_pin_policy         = "none"
-    pi_health_status      = "WARNING"
-    pi_network {
-      network_id = data.ibm_pi_public_network.dsnetwork.id
-    }
+data "ibm_pi_image" "power_images" {
+  pi_image_name        = var.image_name
+  pi_cloud_instance_id = var.power_instance_id
+}
+
+resource "ibm_pi_instance" "pvminstance" {
+  pi_memory               = var.memory
+  pi_processors           = var.processors
+  pi_instance_name        = var.vm_name
+  pi_proc_type            = var.proc_type
+  pi_storage_type         = var.storage_type
+  pi_migratable           = var.migratable
+  pi_image_id             = data.ibm_pi_image.power_images.id
+  pi_volume_ids           = []
+  pi_network { network_id = data.ibm_pi_network.power_networks.0.id }
+  pi_key_pair_name        = var.ssh_key_name
+  pi_sys_type             = var.system_type
+  pi_replication_policy   = var.replication_policy
+  pi_replication_scheme   = var.replication_scheme
+  pi_replicants           = var.replicants
+  pi_cloud_instance_id    = var.power_instance_id
 }
