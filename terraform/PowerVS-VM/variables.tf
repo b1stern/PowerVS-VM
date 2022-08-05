@@ -55,7 +55,7 @@ variable "shareable" {
 
 variable "networks" {
   description = "List of networks that should be attached to the VM"
-  default     = ["rdr-instana-net"]
+  default     = ["public-192_168_179_176-29-VLAN_2082"]
 }
 
 variable "system_type" {
