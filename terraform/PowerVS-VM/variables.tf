@@ -20,7 +20,7 @@ variable "vm_name" {
 
 variable "power_instance_id" {
   description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
-  default     = "9af78e357-4df2-42b8-81af-9960a10b6968"
+  default     = "51e1879c-bcbe-4ee1-a008-49cdba0eaf60"
 }
 
 variable "memory" {
