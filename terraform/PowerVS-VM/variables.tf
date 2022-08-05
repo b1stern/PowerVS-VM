@@ -20,7 +20,7 @@ variable "vm_name" {
 
 variable "power_instance_id" {
   description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
-  default     = "51e1879c-bcbe-4ee1-a008-49cdba0eaf60"
+  default     = "2beb4486-59a9-4e5f-8e8c-1f502b2a4869"
 }
 
 variable "memory" {
@@ -70,7 +70,7 @@ variable "migratable" {
 
 variable "image_name" {
   description = "Name of the image from which the VM should be deployed"
-  default     = "7200-05-01"
+  default     = "7300-00-01"
 }
 
 variable "replication_policy" {
