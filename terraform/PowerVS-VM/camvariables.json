@@ -17,16 +17,39 @@
   ],
   "template_input_params": [  
     {
+        "description": "vCPU Cores",
+	"default": "1",
+        "hidden": false,
+        "immutable": false,
+        "label": "vCPU",
+        "name": "vCPU",
+        "required": true,
+        "secured": false,
+        "type": "string",
+        "group": "virtualmachine"
+    },
+    {
+        "description": "Memory (GB)",
+	"default": "4",
+        "hidden": false,
+        "immutable": false,
+        "label": "memory",
+        "name": "memory",
+        "required": true,
+        "secured": false,
+        "type": "string",
+        "group": "virtualmachine"
+    },
+    {
         "description": "Public SSH key used to connect to the virtual guest",
 	"default": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAEppnUJ192G9CqmlQ5oh0vhjU/NPZSaWv1L27+D6gO+Wq//14Zixwf1FVsuToAnr3D/MhXWbD0Uq594rEX8v8sLfqYoo69K2Rvv51T4auexzlvBrA/IOd2gwc2m+GpHGxFTbmCF2J1uY4sRG1X+G8bK+8lfg2V6UuszGQmEuX8EacQCFC3eYPm4Adnej+FXJK71zBfVGi5W7QDiXZIqA/ol43SuHyIqc07Genvk3qZFbS+FVmyUmpSx8pg1EuD2KYgIq17TIQepA5dMUAaZk9grcuyilN87yJHSfnxh+aSmXDUHySEJGoSt3zEh3RxM8NxjY4LvwMLXScKqcMPG5BBPpnc/kF+BfcvjaNgwSd60O5R4pqQ19dBfUBPwDxxjdWsh8uC3hN6VlYCzMOXkHfNi2F0iJTU04eXwv88DP5+msTg6yiF5w2ausTKRWFZZ9X6loOcnsNfji/KnfHX33HaEED5iETFYFgxUmgWzZs3sKaC1Jh0tnRYR365arUBAas3UcWYw+eMCSm6dzVyLeLwAOY47GwsI5vNpErdNpWXvO7vEHy/qV2+7OY2ufODfQ+JjCrvULnHMYi6L2DMxGyru0jF4N/IcDwkJ9Api7/fOznv3h+JIzIqz+n1jvoXyP8LbJK8D45OJUhHEYip/CMy/0TV88x5thLvLXlu17VNw== bstern@Bens-MacBook-Pro.local",
-        "hidden": false,
+        "hidden": true,
         "immutable": false,
         "label": "Public SSH Key",
         "name": "public_ssh_key",
         "required": true,
         "secured": false,
         "type": "string",
-	      "regex": "^ssh-rsa AAAA[0-9A-Za-z+/]+[=]{0,3}( [^@]+@[^@]+| [^@]+){0,1}$",
         "group": "virtualmachine"
     },
     {
