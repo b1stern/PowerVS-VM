@@ -17,6 +17,18 @@
   ],
   "template_input_params": [  
     {
+        "description": "VM Name",
+	"default": "demoVM",
+        "hidden": false,
+        "immutable": false,
+        "label": "vm_name",
+        "name": "vm_name",
+        "required": true,
+        "secured": false,
+        "type": "string",
+        "group": "virtualmachine"
+    },
+	  {
         "description": "vCPU Cores",
 	"default": "1",
         "hidden": false,
